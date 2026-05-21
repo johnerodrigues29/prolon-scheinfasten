@@ -604,7 +604,7 @@ Gib deine E-Mail ein und aktiviere sofort deinen zusätzlichen
   Du kannst dich jederzeit abmelden.
 </div>
 
-    <button type="button" name="subscribe" class="newsletter-btn" onclick="fbq('track', 'Lead')">
+    <button type="button" name="subscribe" class="newsletter-btn">
       <span class="btn-text">Jetzt Rabatt sichern</span>
     </button>
 	<div class="newsletter-trust">
@@ -977,6 +977,8 @@ wissenschaftlich unterstützen möchten.
         origin: origin,
         page_path: location.pathname 
       });
+	  
+	  fbq('track', 'Lead');
 
       // Lógica de envio visual
       const btnText = btnNews.querySelector(".btn-text");
